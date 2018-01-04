@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Machine learning based Smart monitoring system</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+   
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h1 class="cover-heading text-shadow text-center" style="color:red">RF Based Self Monitoring System </h1>
+              <nav>
+                <ul class="nav masthead-nav text-shadow">
+                
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+           <div class="masthead clearfix">
+            <div class="inner">
+              <nav>
+                <ul class="nav masthead-nav text-shadow">
+                
+                </ul>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="inner cover">
+            <h3 class="cover-heading text-shadow text-center"> Internal Disk Reading at <div id="time"></div></h3>
+          <!--  <p class="lead text-shadow text-center">Port</p> -->
+            <form class="form-inline" role="form">
+            
+            <table>
+            <tr>
+            <td>
+              <label for="Temp">Temp</label>
+              <input type="text" class="form-control field-sm" id="1" placeholder="Temp" value="" data-column="Temp">
+
+             </td>
+             <td>
+              
+              <label for="Power_On_Hr">Power_On_Hr</label>
+  			  <input type="text" class="form-control field-sm" id="2" placeholder="Power_On_Hr" value="" data-column="Power_On_Hr">
+  			   </td>
+           </tr>
+           <tr>
+			<td>
+              <label for="Read_Error">Read_Error</label>
+              <input type="text" class="form-control field-sm" id="3" placeholder="Read_Error" value="" data-column="Read_Error">
+
+			</td>
+             <td>
+
+             <label for="Spin_Up_Time">Spin_Up_Time</label>
+              <input type="text" class="form-control field-sm" id="4" placeholder="Spin_Up_Time" value="" data-column="Spin_Up_Time">
+             </td>
+          </tr>
+           <tr>
+			<td>
+              <label for="Reallocated_Sectors">Reallocated_Sectors</label>
+              <input type="text" class="form-control field-sm" id="5" placeholder="Reallocated_Sectors" value="" data-column="Reallocated_Sectors">
+            </td>
+             <td>
+              <label for="Seek_Error">Seek_Error</label>
+              <input type="text" class="form-control field-sm" id="6" placeholder="Seek_Error" value="" data-column="Seek_Error">
+			 </td>
+          </tr>
+           <tr>
+              <td>
+              <label for="Uncorrectable_Errors">Uncorrectable_Errors</label>
+              <input type="text" class="form-control field-sm" id="7" placeholder="Uncorrectable_Errors" value="" data-column="Uncorrectable_Errors">
+               </td>
+		</td>
+             <td>
+              <label for="High_Fly_Writes">High_Fly_Writes</label>
+              <input type="text" class="form-control field-sm" id="8" placeholder="High_Fly_Writes" value="" data-column="High_Fly_Writes">
+ </td>
+		</tr>
+           <tr>
+			<td>
+             <label for="Hardware_ECC">Hardware_ECC</label>
+              <input type="text" class="form-control field-sm" id="9" placeholder="Hardware_ECC" value="" data-column="Hardware_ECC">
+            
+             </td>
+             <td> 
+
+              <label for="Pending_Sector1">Pending_Sector1</label>
+              <input type="text" class="form-control field-sm" id="10" placeholder="Pending_Sector1" value="" data-column="Pending_Sector1">
+            
+ </td>
+ </tr>
+           </tr>
+              <td>
+              <label for="Reallocated_Sector">Reallocated_Sector</label>
+              <input type="text" class="form-control field-sm" id="11" placeholder="Reallocated_Sector" value="" data-column="Reallocated_Sector">
+              </td>
+             <td>
+
+              <label for="Pending_Sector">Pending_Sector</label>
+              <input type="text" class="form-control field-sm" id="12" placeholder="Pending_Sector" value="" data-column="Pending_Sector">
+              </td>
+</tr>
+</table>
+         </form>
+            
+            
+        <!--
+            
+        <form class="form-inline" role="form">
+            
+              
+              <label for="homeOwnershipField">Attack Type</label>
+              <input type="text" class="form-control field-sm" id="homeOwnershipField" placeholder="Attack Type" value="24000" data-column="home_ownership">
+            
+              
+
+              <label for="incomeField">Sweep Port</label>
+              <input type="text" class="form-control field-sm" id="incomeField" placeholder="Annual Income" value="24000" data-column="annual_inc">
+           
+           <label for="homeOwnershipField">Attack Type</label>
+              <input type="text" class="form-control field-sm" id="homeOwnershipField" placeholder="Attack Type" value="24000" data-column="home_ownership">
+            
+              
+
+              <label for="incomeField">Sweep Port</label>
+              <input type="text" class="form-control field-sm" id="incomeField" placeholder="Annual Income" value="24000" data-column="annual_inc">
+           
+           
+            </form>
+            <form class="form-inline" role="form">
+              
+              
+              
+                <label for="verificationField">Status</label>
+              <input type="text" class="form-control field-sm" id="verificationField" placeholder="Status" value="000" data-column="verification_status">
+            
+
+             
+              
+              
+                <label for="purposeField">Purpose</label>
+              <input type="text" class="form-control field-sm" id="purposeField" placeholder="Purpose Field" value="9000" data-column="purpose">
+            
+             <label for="stateField">Attack Region</label>
+              <input type="text" class="form-control field-sm" id="stateField" placeholder="State Field" value="9000" data-column="addr_state">
+            
+
+              
+
+            </form>
+            <form class="form-inline" role="form">
+              <label for="dtiField">DTI:</label>
+              <input type="text" class="form-control field-sm" id="dtiField" placeholder="DTI" value="27.65" data-column="dti">
+
+              <label for="delinquencyField">Incidences:</label>
+              <input type="text" class="form-control field-sm" id="delinquencyField" placeholder="Delinquency Incidences" value="0" data-column="delinq_2yrs">
+
+            </form>
+            <form class="form-inline" role="form">
+              <label for="revolvingRateField">Attack rate</label>
+              <input type="text" class="form-control field-sm" id="revolvingRateField" placeholder="Revolving Line Utility Rate" value="83.7" data-column="revol_util">
+
+              <label for="creditLinesField">Total Attack</label>
+              <input type="text" class="form-control field-sm" id="creditLinesField" placeholder="Total Credit Lines" value="9" data-column="total_acc">
+
+            </form>
+
+            <form class="form-inline" role="form">
+              <label for="longestCreditField">Longest Attack</label>
+              <input type="text" class="form-control field-sm" id="longestCreditField" placeholder="Longest Credit Length" value="26" data-column="longest_credit_length">
+
+            </form>
+             </form>
+  
+  -->
+           
+            
+      
+            
+            
+
+            <p class="text-center" style="font-size:36px">
+              <strong id="responseField"></strong>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner text-center">
+            
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="underscore/underscore-min.js"></script>
+    <script src="app.js"></script>
+     <script>
+     
+  // $("#testdata").focusout(function(){
+    // alert( $("#testdata").val().split(",")[1]);
+     
+     //for (i = 1; i < 13; i++) { 
+    	// document.getElementById(i).value = $("#testdata").val().split(",")[i-1];
+ //   }
+   
+   
+     
+});
+</script>
+  </body>
+</html>
